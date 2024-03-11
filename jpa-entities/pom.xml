@@ -12,7 +12,7 @@
 
     <artifactId>jpa-entities</artifactId>
 
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
