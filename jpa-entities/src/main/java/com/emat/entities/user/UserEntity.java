@@ -1,6 +1,6 @@
-package entities.user;
+package com.emat.entities.user;
 
-import entities.BaseEntity;
+import com.emat.entities.BaseEntity;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
