@@ -12,7 +12,7 @@
     <name>Web Api module</name>
 
     <properties>
-        <javax-xml-bind.version>2.3.1</javax-xml-bind.version>
+        <jaxb.version>2.3.0</jaxb.version>
         <apache-commons.version>3.8.1</apache-commons.version>
     </properties>
 
@@ -20,18 +20,17 @@
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
-            <version>${javax-xml-bind.version}</version>
-            <scope>provided</scope>
+            <version>${jaxb.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-runtime</artifactId>
-            <version>2.3.3</version>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-core</artifactId>
+            <version>${jaxb.version}</version>
         </dependency>
         <dependency>
-            <groupId>javax.activation</groupId>
-            <artifactId>activation</artifactId>
-            <version>1.1.1</version>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>${jaxb.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
