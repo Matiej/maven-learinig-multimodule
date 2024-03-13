@@ -71,6 +71,8 @@ local.properties
 /target/
 /jpa-entities/target/
 /nos-intelli/target/
+/web-api/target/
+/web-app/target/
 
 ######################
 # Gradle
