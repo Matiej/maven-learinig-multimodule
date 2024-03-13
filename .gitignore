@@ -70,6 +70,7 @@ local.properties
 /log/
 /target/
 /jpa-entities/target/
+/nos-intelli/target/
 
 ######################
 # Gradle

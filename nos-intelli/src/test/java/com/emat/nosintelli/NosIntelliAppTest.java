@@ -1,6 +1,4 @@
-package com.emat.nosintelli
-
--emat;
+package com.emat.nosintelli;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
