@@ -1,4 +1,4 @@
-package entities;
+package com.emat.entities;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
