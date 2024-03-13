@@ -73,6 +73,7 @@ local.properties
 /nos-intelli/target/
 /web-api/target/
 /web-app/target/
+/converters/target/
 
 ######################
 # Gradle
