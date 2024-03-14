@@ -22,18 +22,65 @@
     <properties>
         <revision>1.0-SNAPSHOT</revision>
         <java.version>17</java.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
+        <jaxb.version>2.3.0</jaxb.version>
+        <apache-commons.version>3.8.1</apache-commons.version>
+        <hibernate.version>6.4.4.Final</hibernate.version>
+        <lombok.version>1.18.30</lombok.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate.orm</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-core</artifactId>
+                <version>${jaxb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>${jaxb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache-commons.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
     <build>
         <!--        important plugin. Using revision feature in .m2 folder where is repostiory-->
         <!--        C:\Users\matiej\.m2\repository\com\emat\multimod-maven\1.0-SNAPSHOT\multimod-maven-1.0-SNAPSHOT.pom-->
         <!--        is correct now-->
         <!--        <version>1.0-SNAPSHOT</version>-->
-        <!--        instead of this. This wont work. That plugin fix it. -->
+        <!--        instead of this. This won't work. That plugin fix it. -->
         <!--        <version>${revision}</version>-->
         <plugins>
             <plugin>
@@ -63,10 +110,10 @@
                 </executions>
             </plugin>
 
-<!--            The maven-enforcer-plugin is utilized to enforce specific requirements within a Maven-->
-<!--            project to ensure that the project build is conducted in an appropriate environment. -->
-<!--            This can include enforcing a required Java version, Maven version,-->
-<!--            or even specific system properties or environment variables.-->
+            <!--            The maven-enforcer-plugin is utilized to enforce specific requirements within a Maven-->
+            <!--            project to ensure that the project build is conducted in an appropriate environment. -->
+            <!--            This can include enforcing a required Java version, Maven version,-->
+            <!--            or even specific system properties or environment variables.-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
