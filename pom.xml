@@ -6,7 +6,7 @@
 
     <groupId>com.emat</groupId>
     <artifactId>multimod-maven</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <packaging>pom</packaging>
     <name>Multi Module Maven Project</name>
@@ -20,6 +20,7 @@
     </modules>
 
         <properties>
+            <revision>1.0-SNAPSHOT</revision>
             <java.version>17</java.version>
             <maven.compiler.source>${java.version}</maven.compiler.source>
             <maven.compiler.target>${java.version}</maven.compiler.target>
