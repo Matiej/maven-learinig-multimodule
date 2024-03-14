@@ -12,14 +12,13 @@
     <name>Converters App module</name>
 
     <properties>
-        <mapstruct.version>1.5.5.Final</mapstruct.version>
+
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
-            <version>${mapstruct.version}</version>
         </dependency>
         <dependency>
             <groupId>com.emat</groupId>
