@@ -28,4 +28,41 @@
             <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         </properties>
 
+    <build>
+<!--        important plugin. Using revision feature in .m2 folder where is repostiory-->
+<!--        C:\Users\matiej\.m2\repository\com\emat\multimod-maven\1.0-SNAPSHOT\multimod-maven-1.0-SNAPSHOT.pom-->
+<!--        is correct now-->
+<!--        <version>1.0-SNAPSHOT</version>-->
+<!--        instead of this. This wont work. That plugin fix it. -->
+<!--        <version>${revision}</version>-->
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <configuration>
+                    <flattenMode>bom</flattenMode>
+                </configuration>
+                <executions>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
